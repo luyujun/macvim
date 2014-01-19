@@ -34,3 +34,5 @@ com -nargs=1 Chw  call Cw()
 
 let g:indent_guides_auto_colors = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+
+set foldmethod=indent
