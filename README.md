@@ -1,4 +1,4 @@
 vimx64
 ======
 
-windows7 64
+osx 10.9
