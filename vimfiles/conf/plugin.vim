@@ -520,11 +520,14 @@ let g:user_zen_settings = {
 \	'stylus':{
 \		'extends': 'sass'
 \	},
+\	'scss':{
+\		'extends': 'css'
+\	},
 \}
 " ZenCoding展开快键
 let g:user_zen_expandabbr_key='<C-e>'
 " 映射Alt+e到Ctrl+e
-imap <A-e> <C-e>
+imap <D-e> <C-e>
 " 1}}}
 " --------------------------------------------------
 " [NERDTree相关配置] {{{1
@@ -554,7 +557,7 @@ let g:Tlist_Use_Right_Window=1
 " 调用快捷键
 let g:acmd_call_key='<A-s>'
 " 针对文件类型
-let g:acmd_filetype_list=['haml', 'sass', 'less', 'coffee', 'jade']
+let g:acmd_filetype_list=['haml', 'sass', 'scss', 'less', 'coffee', 'jade']
 " 命令名称
 "let g:acmd_cmd='Acmd'
 " 执行前置函数默认为保存
