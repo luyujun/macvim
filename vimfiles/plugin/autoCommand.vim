@@ -79,9 +79,11 @@ endf
 " 默认命令
 fu! autocommand#getCommand(type)
   if a:type==".haml"
-    let ret="haml -nq #{$fileName}.haml #{$fileName}.html"
+    let ret="haml -nq #{$fileName}.haml #{$fileName}.htm"
   elsei a:type==".sass"
     let ret="sass #{$fileName}.sass #{$fileName}.css"
+  elsei a:type==".scss"
+    let ret="sass --scss --style compact --sourcemap #{$fileName}.scss #{$fileName}.css"
   elsei a:type==".less"
     let ret="lessc #{$fileName}.less>#{$fileName}.css"
   elsei a:type==".coffee"

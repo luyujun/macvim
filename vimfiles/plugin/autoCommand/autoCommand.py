@@ -16,24 +16,13 @@ def createConfigFile():
   # ≥ı ºªØ≈‰÷√
   config = '''{
   ".haml": {
-    "command": "haml -nq #{$fileName}.haml>../#{$fileName}.htm"
-    /* ÷¥––√¸¡Ó */
+    "command": "haml -nq #{$fileName}.haml ../#{$fileName}.htm"
   },
-  ".jade": {
-    "command": "jade #{$fileName}.jade -PO>../#{$fileName}.htm"
-    /* ÷¥––√¸¡Ó */
-  },
-  ".sass": {
-    "command": "sass --style compact #{$fileName}.sass>../css/#{$fileName}.css"
-    /* ÷¥––√¸¡Ó */
-  },
-  ".less": {
-    "command": "lessc #{$fileName}.less>../css/#{$fileName}.css"
-    /* ÷¥––√¸¡Ó */
-  },
-  ".coffee": {
-    "command": "coffee -bp #{$fileName}.coffee>#{$fileName}.js"
-    /* ÷¥––√¸¡Ó */
+  ".scss": {
+    "command": [
+      "sass --scss --style compact --sourcemap #{$fileName}.scss ../css/#{$fileName}.css",
+      "sass --scss --style compressed #{$fileName}.scss ../css/#{$fileName}.min.css"
+    ]
   }
 }'''
   # –¥»Î≈‰÷√
