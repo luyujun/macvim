@@ -20,8 +20,8 @@ def createConfigFile():
   },
   ".scss": {
     "command": [
-      "sass --scss --style compact --sourcemap #{$fileName}.scss ../css/#{$fileName}.css",
-      "sass --scss --style compressed #{$fileName}.scss ../css/#{$fileName}.min.css"
+      "sass --scss --style compact #{$fileName}.scss ../css/#{$fileName}.css",
+      "sass --scss --style compressed --sourcemap=none #{$fileName}.scss ../css/#{$fileName}.min.css"
     ]
   }
 }'''

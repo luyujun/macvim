@@ -83,7 +83,7 @@ fu! autocommand#getCommand(type)
   elsei a:type==".sass"
     let ret="sass #{$fileName}.sass #{$fileName}.css"
   elsei a:type==".scss"
-    let ret="sass --scss --style compact --sourcemap #{$fileName}.scss #{$fileName}.css"
+    let ret="sass --scss --style compact --sourcemap=none #{$fileName}.scss #{$fileName}.css"
   elsei a:type==".less"
     let ret="lessc #{$fileName}.less>#{$fileName}.css"
   elsei a:type==".coffee"
