@@ -525,10 +525,31 @@ let g:user_zen_settings = {
 \	},
 \}
 " ZenCoding展开快键
-let g:user_zen_expandabbr_key='<C-e>'
+"let g:user_zen_expandabbr_key='<C-e>'
+" 映射Alt+e到Ctrl+e
+"imap <D-e> <C-e>
+" 1}}}
+
+" [Emmet相关配置] {{{1
+let g:user_emmet_settings = {
+  \  'indentation' : '  ',
+  \  'perl' : {
+  \    'aliases' : {
+  \      'req' : 'require '
+  \    },
+  \    'snippets' : {
+  \      'use' : "use strict\nuse warnings\n\n",
+  \      'warn' : "warn \"|\";",
+  \    }
+  \  }
+  \}
+" Emmet展开快键
+let g:user_emmet_expandabbr_key = '<C-e>'
 " 映射Alt+e到Ctrl+e
 imap <D-e> <C-e>
-" 1}}}
+let g:use_emmet_complete_tag = 1
+" [Emmet相关配置] 1}}}
+
 " --------------------------------------------------
 " [NERDTree相关配置] {{{1
 " --------------------------------------------------
